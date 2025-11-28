@@ -39,32 +39,23 @@
 .container * {
     font-size: clamp(14px, 2vw, 20px);
 }
-/* Flex container */
 .container {
     display: flex;
-    flex-wrap: wrap;        /* items wrap to next line */
-    gap: 20px;
+    flex-wrap: wrap;       /* allows wrapping into new rows */
+    gap: 20px;             /* ← THIS CREATES SPACE BETWEEN BOXES */
     padding: 20px;
+    background: grey;
 }
 
-/* Flex item with text wrapping */
 .item {
-    display: flex;          /* make the item itself flex */
-    flex-direction: column; /* stack text vertically */
-    flex: 1 1 250px;        /* responsive width */
     background: #D3D3D3;
     padding: 20px;
     border-radius: 10px;
     list-style: none;
+    flex: 1 1 200px;       /* responsive width */
 
-    /* IMPORTANT: text wrapping inside flex */
-    white-space: normal;   
+    /* ensures text wraps safely */
+    white-space: normal;
     overflow-wrap: break-word;
-    word-wrap: break-word;
 }
 
-/* Optional styling for text */
-.item p {
-    margin: 5px 0;
-    font-size: clamp(14px, 2vw, 18px);
-}
