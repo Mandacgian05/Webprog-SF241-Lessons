@@ -42,26 +42,28 @@
 /* Flex container */
 .container {
     display: flex;
-    flex-wrap: wrap;       /* allows items to wrap */
+    flex-wrap: wrap;        /* items wrap to next line */
     gap: 20px;
     padding: 20px;
 }
 
-/* Flex item with wrapped text */
+/* Flex item with text wrapping */
 .item {
-    flex: 1 1 250px;       
+    display: flex;          /* make the item itself flex */
+    flex-direction: column; /* stack text vertically */
+    flex: 1 1 250px;        /* responsive width */
     background: #D3D3D3;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     list-style: none;
 
-    /* Ensure text wraps properly */
-    word-wrap: break-word;
+    /* IMPORTANT: text wrapping inside flex */
+    white-space: normal;   
     overflow-wrap: break-word;
-    white-space: normal;
+    word-wrap: break-word;
 }
 
-/* Optional: Style the <p> tags */
+/* Optional styling for text */
 .item p {
     margin: 5px 0;
     font-size: clamp(14px, 2vw, 18px);
