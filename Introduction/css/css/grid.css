@@ -12,3 +12,83 @@
   font-size: 30px;
   text-align: center;
 }
+
+.container {
+  display: grid;
+  column-gap: 50px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: LightBlue;
+}
+ 
+.container div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+
+}
+
+/* Make the container a flexbox */
+.container {
+    display: flex;
+    flex-wrap: wrap;        /* allows items to go to the next line */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;              /* space between items */
+    padding: 20px;
+}
+
+/* Make text responsive */
+.container * {
+    font-size: clamp(14px, 2.5vw, 22px);
+}
+/*
+Explanation:
+- Minimum text size: 14px (for small phones)
+- Ideal responsive size: 2.5vw (viewport width)
+- Maximum text size: 22px (for large screens)
+*/
+
+/* Optional: Make blocks flexible */
+.box {
+    flex: 1 1 300px;    /* grow, shrink, minimum width */
+    background: #eee;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Flexbox container */
+.container {
+    display: flex;
+    flex-wrap: wrap;         /* images wrap on smaller screens */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Each image wrapper */
+.item {
+    flex: 1 1 250px;         /* responsive width */
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive images */
+.item img {
+    width: 100%;             /* fills the flex item */
+    max-width: 300px;        /* optional max size */
+    height: auto;            /* keeps aspect ratio */
+    object-fit: cover;       /* prevents distortion */
+    border-radius: 10px;     /* optional */
+}
+
+/* Responsive text (optional) */
+.container * {
+    font-size: clamp(14px, 2vw, 20px);
+}
