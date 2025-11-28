@@ -92,3 +92,8 @@ Explanation:
 .container * {
     font-size: clamp(14px, 2vw, 20px);
 }
+
+.container {
+  display: grid;
+  justify-content: space-evenly;
+}
