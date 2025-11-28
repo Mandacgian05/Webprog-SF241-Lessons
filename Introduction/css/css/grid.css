@@ -39,3 +39,30 @@
 .container * {
     font-size: clamp(14px, 2vw, 20px);
 }
+/* Flex container */
+.container {
+    display: flex;
+    flex-wrap: wrap;       /* allows items to wrap */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Flex item with wrapped text */
+.item {
+    flex: 1 1 250px;       
+    background: #D3D3D3;
+    padding: 15px;
+    border-radius: 10px;
+    list-style: none;
+
+    /* Ensure text wraps properly */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Optional: Style the <p> tags */
+.item p {
+    margin: 5px 0;
+    font-size: clamp(14px, 2vw, 18px);
+}
