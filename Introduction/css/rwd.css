@@ -100,4 +100,91 @@ body {
   .content {grid-area: 2 / span 4;}
   .facts {grid-area: 2 / span 1;}
   .footer {grid-area: 3 / span 6;}
+
+}
+
+/* -----------------------------------------
+   FLEXBOX CLEAN RESPONSIVE LAYOUT
+------------------------------------------*/
+
+/* Make all text sections cleaner */
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Make the About Me list cleaner */
+.inner li p,
+.inner p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Center main content on mobile */
+.content .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* -----------------------------------------
+   IMAGE RESPONSIVENESS
+------------------------------------------*/
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* -----------------------------------------
+   GRID CONTAINER RESPONSIVE FIX
+------------------------------------------*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;  
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -----------------------------------------
+   BUTTONS RESPONSIVE (Flexbox)
+------------------------------------------*/
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1 1 auto;
+    min-width: 140px;
+}
+
+/* -----------------------------------------
+   RESPONSIVE TYPOGRAPHY
+------------------------------------------*/
+@media (max-width: 600px) {
+    h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+    p, li {
+        font-size: 14px;
+    }
+}
+
+/* -----------------------------------------
+   MAIN LAYOUT WRAPPER
+------------------------------------------*/
+.tabs {
+    width: 95%;
+    max-width: 800px;
+    margin: auto;
 }
