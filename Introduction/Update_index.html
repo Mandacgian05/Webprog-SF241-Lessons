@@ -10,6 +10,94 @@
 <body>
 <body style="background: url(https://static.vecteezy.com/system/resources/previews/005/087/188/non_2x/abstract-dark-3d-effect-background-for-business-presentations-and-websites-nice-and-calm-wave-shape-vector.jpg); background-size:100%" >
 <style>
+	* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 17px;  
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'header'
+  'menu'
+  'main'
+  'facts'
+  'footer';
+  background-color: white;
+  gap: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-color: purple;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header > h1 {
+  font-size: 40px;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.content {
+  grid-area: main;
+}
+
+.content > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.content > p {
+  margin-bottom: 7px;
+}
+
+.facts {
+  grid-area: facts;
+  border: 1px solid #0099cc;
+  background-color: beige;
+  padding: 10px;
+}
+
+.facts > h2 {
+  font-size: 20px;
+}
+
+.facts li {
+  margin-bottom: 5px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+}
+
 <font face="Lato" color="#0000;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
@@ -100,96 +188,7 @@ button {
     color: #FFFF;
 }
 </style>
-	* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Lucida Sans", sans-serif;
-  font-size: 17px;  
-}
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-  'header'
-  'menu'
-  'main'
-  'facts'
-  'footer';
-  background-color: white;
-  gap: 10px;
-}
-
-.header {
-  grid-area: header;
-  background-color: purple;
-  text-align: center;
-  color: #ffffff;
-}
-
-.header > h1 {
-  font-size: 40px;
-}
-
-.menu {
-  grid-area: menu;
-}
-
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: #33b5e5;
-  color: #ffffff;
-}
-
-.menu li:hover {
-  background-color: #0099cc;
-}
-
-.content {
-  grid-area: main;
-}
-
-.content > h1 {
-  font-size: 30px;
-  margin-bottom: 7px;
-}
-
-.content > p {
-  margin-bottom: 7px;
-}
-
-.facts {
-  grid-area: facts;
-  border: 1px solid #0099cc;
-  background-color: beige;
-  padding: 10px;
-}
-
-.facts > h2 {
-  font-size: 20px;
-}
-
-.facts li {
-  margin-bottom: 5px;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: #0099cc;
-  color: #ffffff;
-  text-align: center;
-}
-</style>
-</head>
-<body>
+	
 
     
     <div class="tabs">
