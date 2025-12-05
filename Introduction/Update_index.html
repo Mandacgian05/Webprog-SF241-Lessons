@@ -1,188 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>WEBPROG SF241 Introduction</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>    
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Personal Webpage</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.25);
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+            transition: transform .3s ease;
+        }
+
+        .glass-card:hover {
+            transform: scale(1.03);
+        }
+
+        .hover-zoom {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.4);
+        }
+    </style>
 </head>
 <body>
-<body style="background: url(https://static.vecteezy.com/system/resources/previews/005/087/188/non_2x/abstract-dark-3d-effect-background-for-business-presentations-and-websites-nice-and-calm-wave-shape-vector.jpg); background-size:100%" >
-<style>
-<font face="Lato" color="#0000;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<div class="container">
 
-body {
-     text-color:#FFFFF
-    background-color: ##00008B;
-    overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
-}
+    <!-- HEADER -->
+    <div class="text-center mb-5 text-white">
+        <img src="https://i.pinimg.com/564x/ce/46/c0/ce46c062200d94ceabf54e2dc079c740.jpg" class="profile-img mb-3 shadow"> 
+        <h1 class="fw-bold hover-zoom">Gian S. Mandac</h1>
+        <p class="lead">BSCS-SF • Aspiring Developer • Tech Enthusiast</p>
+    </div>
 
-button {
-    outline: none;
-}
+    <!-- MAIN GRID -->
+    <div class="row g-4">
 
-.tabs {
-    max-width: 800px;
-    margin: 50px auto;
-}
-
-.buttons {
-   text-color:#FFFFF
-    width: fit-content;
-    background-color: ##00008B;
-    padding: 7px 10px 0 0px;
-}
-
-.buttons button {
-    padding: 19px 29px;
-    text-transform: uppercase;
-    border-radius: 0px;
-    background: ##00008B;
-    border: none;
-	text-color:#FFFFF
-    border-bottom: 3px solid #000;
-    /* box-shadow: 4px 3px 10px #ddd; */
-    margin-right: 6px;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-    transition: all 500ms;
-}
-
-.buttons button.active {
-    color:  hsl(265deg 100% 47%);
-    border-bottom: 3px solid hsl(265deg 100% 47%);
-}
-
-.content {
-    position: relative;
-}
-
-.content .inner {
-    padding: 25px;
-    box-shadow: 4px 3px 10px #a3a5a8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: ##00008B;
-    width: 100%;
-    opacity: 0;
-    transform: rotateX(-70deg);
-    transform-origin: 0%;
-    transition: all 400ms;
-}
-
-.content .inner.active {
-    position: relative;
-    opacity: 1;
-    z-index: 1;
-	color: #FFFF;
-    transform: rotateX(0deg);
-}
-
-.content .inner h1 {
-    font-size: 35px;
-    padding-bottom: 15px;
-	color: #FFFF;
-}
-
-.content .inner p {
-    letter-spacing: 0.5px;
-    line-height: 23px;
-    color: #FFFF;
-}
-</style>
-
-<div class="container-fluid mt-3">
-  <h1>Responsive Auto Layout Columns</h1>
-  <p>In Bootstrap 5, there is an easy way to create equal width columns: just use the <code>.col-md</code> class on a specified number of col elements. Bootstrap will recognize how many columns there are, and each column will get the same width.</p>
-  <p>If the screen size is <strong>less than 768px</strong>, the columns will stack horizontally.</p>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md bg-primary text-white">1 of 2</div>
-      <div class="col-md bg-dark text-white">2 of 2</div>
-    </div>  
-  </div>
-  <br>
-  
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md bg-primary text-white">1 of 4</div>
-      <div class="col-md bg-dark text-white">2 of 4</div>
-      <div class="col-md bg-primary text-white">3 of 4</div>
-      <div class="col-md bg-dark text-white">4 of 4</div>
-    </div>  
-  </div>
-</div>
-    
-    <div class="tabs">
-        <div class="buttons">
-            <button class="tab-1 active" onclick="makeActiveTab(1)">HOMEPAGE</button>
-            <button class="tab-2" onclick="makeActiveTab(2)">PERSONAL PAGE</button>
-           
+        <!-- ABOUT ME -->
+        <div class="col-md-6">
+            <div class="glass-card">
+                <h2 class="section-title">About Me</h2>
+                <p class="hover-zoom">I'm Gian Mandac, passionate about technology, software, and improving my skills every day.</p>
+            </div>
         </div>
-        <div class="content">
-            <div class="inner content-1 active">
-                <h1 style="color: white;"><h1>WebProg Introduction</h1> 
 
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="Gian"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Mandac"><br><br>
- 
-</form> 
+        <!-- EDUCATION -->
+        <div class="col-md-6">
+            <div class="glass-card">
+                <h2 class="section-title">Education</h2>
+                <ul>
+                    <li class="hover-zoom">Course: BSCS-SF</li>
+                    <li class="hover-zoom">Working on multiple IT-related projects</li>
+                </ul>
+            </div>
+        </div>
 
-</body>
-</html>
+        <!-- EXPERIENCE -->
+        <div class="col-md-6">
+            <div class="glass-card">
+                <h2 class="section-title">IT Experience</h2>
+                <p class="hover-zoom">Learning HTML, CSS, JavaScript, Bootstrap, and system design. Creating webpage projects and improving backend fundamentals.</p>
+            </div>
+        </div>
 
+        <!-- HOBBIES -->
+        <div class="col-md-6">
+            <div class="glass-card">
+                <h2 class="section-title">Hobbies & Interests</h2>
+                <ul>
+                    <li class="hover-zoom">Online Games</li>
+                    <li class="hover-zoom">Fitness & Exercise</li>
+                    <li class="hover-zoom">Programming & Tech Exploration</li>
+                </ul>
+            </div>
+        </div>
 
-             <ul>   
-				<li>
-				<p>
-                  
-			  <center><img src="https://i.pinimg.com/564x/ce/46/c0/ce46c062200d94ceabf54e2dc079c740.jpg" width="700" height="400"></center>
-			</ul>
-			</div>
-            <div class="inner content-2">
-                <h1>About Me</h1>
-                <h1>Gian Mandac</h1>
+        <!-- GOALS -->
+        <div class="col-12">
+            <div class="glass-card text-center">
+                <h2 class="section-title">My Goal</h2>
+                <p class="hover-zoom">To become financially successful, excel in tech, and live life on my terms.</p>
+            </div>
+        </div>
 
+    </div>
+</div>
 
-	<li>
-		<p>Hello, my name is Gian S. Mandac</p>
-		<p>Education / Achievements</p>
-<p>Course:BSCS-SF </p>
-<p> IT Experience</p>
-<p>Hobbies & Interests: Online games and exercise</p>
-<p> Goals In Life / Dream: be rich asfck </p>
-
-	</li>
-	<br>
-	<li>
-		
-	</li>
-</ul>
-            
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
-    <script>
-        function makeActiveTab(num) {
-            $('.buttons button').removeClass('active');
-            $('.buttons .tab-'+num).addClass('active');
-
-            $('.inner').removeClass('active');
-            $('.tabs .content-'+num).addClass('active');
-        }
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
